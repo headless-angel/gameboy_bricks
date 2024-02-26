@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:com_appscraft_gameboy/gamer/gamer.dart';
 import 'package:com_appscraft_gameboy/generated/l10n.dart';
 import 'package:com_appscraft_gameboy/material/audios.dart';
@@ -5,7 +7,7 @@ import 'package:com_appscraft_gameboy/panel/page_portrait.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 import 'gamer/keyboard.dart';
 
@@ -31,6 +33,28 @@ void _disableDebugPrint() {
 final RouteObserver<ModalRoute> routeObserver = RouteObserver<ModalRoute>();
 
 class MyApp extends StatelessWidget {
+  late BannerAd bannerAd;
+  bool isAdLoaded = false;
+
+  initbannerAd() {
+    bannerAd = BannerAd(
+      size: AdSize.banner,
+      adUnitId: '',
+      listener: BannerAdListener(
+        onAdLoaded: (ad) {
+          isAdLoaded = true;
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+          print(error);
+        },
+      ),
+      request: AdRequest(),
+    );
+
+    bannerAd.load();
+  }
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

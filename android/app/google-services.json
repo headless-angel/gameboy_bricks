@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "867910778768",
+    "project_id": "com-appscraft-gameboy",
+    "storage_bucket": "com-appscraft-gameboy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867910778768:android:4b820fcf035cf3e5f8bd15",
+        "android_client_info": {
+          "package_name": "com.appscraft.gameboy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwVKB8A-Wm6MOpnxRaa4e8MNZZfaFU7O4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

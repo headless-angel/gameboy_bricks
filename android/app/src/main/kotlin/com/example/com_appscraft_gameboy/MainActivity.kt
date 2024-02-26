@@ -1,4 +1,4 @@
-package com.example.com_appscraft_gameboy
+package com.appscraft.gameboy
 
 import io.flutter.embedding.android.FlutterActivity
 
